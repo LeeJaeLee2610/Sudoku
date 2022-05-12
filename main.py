@@ -39,7 +39,7 @@ def FirstPos(gridArray):
         a.append({1,2,3,4,5,6,7,8,9}) #Thêm các giá trị từ 1 đến 9 vào mỗi ô trong ma trận
     for i in range(9):
         for j in range(9):
-            if gridArray[i][j] == 0: #Các vị trí =0 có 1 list từ 1 -> 9 các giá trị thỏa mãn
+            if gridArray[i][j] == 0: #Các vị trí = 0 có 1 list từ 1 -> 9 các giá trị thỏa mãn
                 for ii in range(9): #Kiểm tra các hàng và cột của ô cần xét xem các giá trị nào đã có và loại bỏ nó khỏi list
                     a[i*9+j].discard(gridArray[ii][j])
                     a[i*9+j].discard(gridArray[i][ii])
@@ -52,7 +52,7 @@ def FirstPos(gridArray):
     x = -1 #x là hàng
     y = -1 #y là cột
     se = {} # tập thỏa mãn
-    for k in range(81): 
+    for k in range(81):
         if (len(a[k])) < min and gridArray[k//9][k%9] == 0: #Với các len() của a nhỏ nhất và với vị trí trong bảng == 0
             x = k//9
             y = k%9
